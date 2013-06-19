@@ -4,6 +4,13 @@ require_relative '../config'
 
 class CreateStudents < ActiveRecord::Migration
   def change
-    # HINT: checkout ActiveRecord::Migration.create_table
+    create_table :students do |table|
+      table.string :first_name
+      table.string :last_name
+      table.string :gender
+      table.date   :birthday
+      table.string :email
+      table.string :phone
+    end
   end
 end
