@@ -11,6 +11,7 @@ module StudentsImporter
         else
           attribute_hash = Hash[field_names.zip(data)]
           student = Student.create!(attribute_hash)
+          student.teacher_id = [1..9].sample
         end
       end
     end
